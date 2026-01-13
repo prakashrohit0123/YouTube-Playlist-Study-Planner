@@ -1,0 +1,237 @@
+/* =========================
+   BASE LAYOUT
+   ========================= */
+
+body {
+  font-family: Arial, sans-serif;
+  width: 280px;
+  padding: 12px;
+}
+
+h2 {
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+
+h4 {
+  font-size: 16px;
+  margin: 6px 0;
+}
+
+/* =========================
+   INPUTS
+   ========================= */
+
+input {
+  width: 100%;
+  padding: 6px;
+  margin-top: 4px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+/* =========================
+   RANGE SECTION
+   ========================= */
+
+#range {
+  margin-bottom: 8px;
+}
+
+/* =========================
+   SPLIT CALCULATE BUTTON
+   ========================= */
+
+#actionRow {
+  display: flex;
+  align-items: stretch;
+  margin-top: 6px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+/* SAME HEIGHT FOR BOTH */
+#calcBtn,
+#speedSelect {
+  height: 38px;
+}
+
+/* MAIN CALCULATE BUTTON */
+#calcBtn {
+  flex: 1;
+  background: #ff0000; 
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 0;
+  line-height: 38px; /* vertical centering */
+}
+
+/* DIVIDER */
+.divider {
+  width: 1px;
+  background: rgba(255, 255, 255, 0.6);
+}
+
+/* SPEED DROPDOWN */
+#speedSelect {
+  width: 64px;
+  background: #ff0000;
+  color: white;
+  border: none;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0;
+  text-align: center;
+
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+/* HOVER EFFECT */
+#calcBtn:hover,
+#speedSelect:hover {
+  opacity: 0.9;
+}
+
+/* =========================
+   STATUS + LOADER
+   ========================= */
+
+#status {
+  margin-top: 8px;
+  font-size: 13px;
+}
+
+#loader {
+  display: none;
+  margin-right: 6px;
+}
+
+#loader.loading {
+  display: inline-block;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* =========================
+   BIG RESULT CARD
+   ========================= */
+
+#bigResult {
+  margin-top: 12px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 10px;
+  background: #f4f7ec; /* soft olive */
+}
+
+#bigTime {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 0;
+  color: #3f4f1b;
+}
+
+#speedLabel {
+  font-size: 13px;
+  color: #555;
+  margin-top: 4px;
+}
+
+/* =========================
+   DAILY WATCH PLANNER
+   ========================= */
+
+#perDay {
+  margin-top: 10px;
+  font-size: 13px;
+}
+
+#perDay button {
+  width: 100%;
+  padding: 8px;
+  background: #ff0000;
+  color: white;
+  border: none;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 6px;
+}
+
+#perDay button:hover {
+  opacity: 0.9;
+}
+
+/* ===== ACCORDION SCHEDULE ===== */
+
+.day-card {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-bottom: 6px;
+  overflow: hidden;
+}
+
+.day-header {
+  padding: 8px;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+  background: #f7f7f7;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.day-header:hover {
+  background: #ececec;
+}
+
+.day-body {
+  display: none;
+  padding: 6px 10px;
+}
+
+.day-body ul {
+  padding-left: 16px;
+  margin: 4px 0;
+}
+
+.day-body li {
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
+.arrow {
+  font-size: 12px;
+}
+/* ===== VIDEO CARD INSIDE DAY ===== */
+
+.video-card {
+  background: #e5f4e3;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 6px 8px;
+  margin-bottom: 6px;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.video-index {
+  font-weight: bold;
+  color: #ff0000; /* matches your red theme */
+  margin-right: 4px;
+}
+h2 img {
+  vertical-align: middle;
+  margin-right: 6px;
+}

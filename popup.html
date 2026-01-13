@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>YT Playlist Calculator</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+
+  <h2>
+    <img src="icons/playlist.png" width="16">
+    YT Playlist Time
+  </h2>
+
+  <div id="range">
+    <h4>🎯 Video Range (optional)</h4>
+    <input type="number" id="fromVideo" placeholder="From video #" min="1">
+    <input type="number" id="toVideo" placeholder="To video #" min="1">
+  </div>
+
+  <!-- CALCULATE + SPEED SELECT -->
+  <!-- CALCULATE + SPEED (SPLIT BUTTON) -->
+<div id="actionRow">
+  <button id="calcBtn">Calculate</button>
+
+  <div class="divider"></div>
+
+  <select id="speedSelect">
+    <option value="1x">1x</option>
+    <option value="1.25x">1.25x</option>
+    <option value="1.5x" selected>1.5x</option>
+    <option value="1.75x">1.75x</option>
+    <option value="2x">2x</option>
+  </select>
+</div>
+
+
+  <p id="status">
+    <span id="loader">⏳</span>
+    <span id="statusText"></span>
+  </p>
+
+  <!-- BIG RESULT -->
+  <div id="bigResult">
+    <p id="bigTime">—</p>
+    <p id="speedLabel"></p>
+  </div>
+
+  <div id="perDay">
+    <h4>
+      📅 Daily Watch Planner
+    </h4>
+    <input type="number" id="dailyHours" placeholder="Hours per day" min="0.5" step="0.5">
+    <button id="dayCalcBtn" title="Create a day-wise watch plan">
+  Generate Schedule
+</button>
+
+    <div id="days"></div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
